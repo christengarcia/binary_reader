@@ -17,5 +17,14 @@ namespace binary_reader
             Display();
         }
 
+        public static void Write()
+        {
+            using (BinaryWriter writer = new BinaryWriter(File.Open(fileName, FileMode.Create)))
+            {
+                writer.Write(1.250F);
+                writer.Write(@"C:\Temp);
+            }
+        }
+
     }
 }
